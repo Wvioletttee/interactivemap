@@ -1,2 +1,2 @@
 # Interactivemap
-Map Testing on interactive Lizmap Cambodia Car accessmod 
+Map Testing on interactive Lizmap Cambodia accessmod 
