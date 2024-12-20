@@ -1,2 +1,32 @@
 # Interactivemap
-Map Testing on interactive Lizmap Cambodia accessmod 
+Map Testing on interactive Lizmap Cambodia accessmod
+// Javascript file to hide buttons which are not necessary for the demonstration
+// or to activate a key feature by default in the project
+lizMap.events.on({
+    'uicreated': () => {
+        function waitForElm(selector) {
+            return new Promise(resolve => {
+                if (document.querySelector(selector)) {
+                    return resolve(document.querySelector(selector));
+                }
+
+                const observer = new MutationObserver(mutations => {
+                    if (document.querySelector(selector)) {
+                        resolve(document.querySelector(selector));
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            });
+        }
+
+        waitForElm('#button-Mapillary').then((elm) => {
+            elm.click();
+            $('#button-switcher').hide();
+        });
+    }
+});
