@@ -1,5 +1,5 @@
 # Interactivemap
-Map Testing on interactive Lizmap Cambodia accessmod
+# Map Testing on interactive Lizmap Cambodia accessmod
 // Javascript file to hide buttons which are not necessary for the demonstration
 // or to activate a key feature by default in the project
 lizMap.events.on({
